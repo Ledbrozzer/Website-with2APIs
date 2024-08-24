@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+.wallpapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    z-index: -1;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.box{
+    display: flex;
+    /*align-items: center;*/
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+}
+.search button{
+    margin: 0rem .5rem 0rem;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background: #4d54ff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    transform: translate(53px, 0px);
+    cursor: pointer;
+}
+.search img{
+    width: 25px;
+    height: 25px;
+}
+.search input{
+    height: 50px;
+    width: 40px;
+    padding: 0.5rem 0.5rem 0.5rem 2.6rem;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    /*display: hidden;*/
+    visibility: hidden;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    visibility: hidden;
+}
+.weather{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+    width: 350px;
+    height: 100%;
+    max-height: 550px;
+    z-index: 1;
+}
+.weather img{
+    height: 11.5rem;
+    margin-bottom: 0.25rem;
+}
+.weather h2{
+    width: 325px;
+    margin-bottom: 0.65rem;
+    font-size: 3.375rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.weather h3{
+    font-size: 8rem;
+    line-height: 6rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+}
+.content-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: .75rem;
+    text-transform: uppercase;
+}
+.weather::after{
+    content: "";
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    height: 406px;
+    width: 350px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(194, 188, 194, 0.00) 0%, rgba(194, 188, 194, 0.00));
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    filter: blur(4.5px);
+    z-index: -1;
+}
+.content-options p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+.content-music{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+    width: 350px;
+    height: 100%;
+    max-height: 550px;
+    z-index: 1;
+}
+.icon-music{
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-bottom: 1.25rem;
+    margin-top: 2rem;
+}
+.content-music h2{
+    font-size: 3.375rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.playlist-box{
+    width: 100%;
+    list-style: none;
+    visibility: hidden;
+}
+.playlist-box li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0rem 0.75rem;
+}
+.playlist-box li img{
+    width: 40px;
+    height: 40px;
+    margin-right: 0.75rem
+}
+.playlist-box li p{
+    width: 210px;
+    font-size: 2rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-music::after{
+    content: "";
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    height: 406px;
+    width: 350px;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(194, 188, 194, 0.00) 0%, rgba(194, 188, 194, 0.00));
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    filter: blur(4.5px);
+    z-index: -1;
+}
+@media (max-width: 755px) {
+    .container{
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    .content{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .weather{
+        width: 250px;
+    }
+    .weather img{
+        height: 8.5rem;
+    }
+    .weather h2{
+        font-size: 2.375rem;
+    }
+    .weather h3{
+        font-size: 5rem;
+        line-height: 3rem;
+    }
+    .content-options{
+        max-width: 170px;
+    }
+    .content-options p{
+        font-size: 1.5rem;
+        line-height: initial;
+    }
+    .weather::after{
+        width: 250px;
+        height: 290px;
+        top: 4rem;
+    }
+    .content-music{
+        width: 250px;
+    }
+    .icon-music{
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0rem;
+    }
+    .content-music h2{
+        font-size: 2.375rem;
+        margin-bottom: 1.75rem;
+    }
+}/*
+@media (max-width: 755px) {
+    .playlist-box li img{
+        width: 30px;
+        height: 30px;
+    }
+    .playlist-box li p{
+        font-size: 1.5rem;
+    }
+    .content-music::after{
+        height: 350px;
+        width: 250px;
+        top: 5rem;
+    }
+}*/ 
